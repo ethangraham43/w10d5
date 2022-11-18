@@ -10,13 +10,18 @@ function App() {
     <div className='page-wrapper'>
       <GalleryNavigation galleries={harvardArt.records}/>
       <Switch>
-      <Route path={'/galleries/:galleryId'}>
-        <GalleryView galleries={harvardArt.records} />
-      </Route>
-      <Route path="/">
-        <div><h1>HOME</h1></div>
-      </Route>
-
+        <Route path={'/galleries/:galleryId'}>
+          <GalleryView galleries={harvardArt.records} />
+        </Route>
+        <Route exact path="/">
+          <div>
+            <h2>Harvard Art Museum</h2>
+            <p>Look, but Don't Touch. Please select a Gallery in the navigation bar.</p>
+          </div>
+        </Route>
+        <Route>
+          <h2>Page Not Found</h2>
+        </Route>
       </Switch>
     </div>
   );
