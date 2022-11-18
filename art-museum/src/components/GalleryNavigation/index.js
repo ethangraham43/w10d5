@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import './GalleryNavigation.css'
 
 
 export default function GalleryNavigation(props) {
